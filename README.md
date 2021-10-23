@@ -2,12 +2,11 @@
 
 Um provador de teoremas de lógica proposicional escrito em JavaScript.
 
-
 ### Aviso de Data
 
 A data nos commits não reflete a data real de desenvolvimento. Eu escrevi este script quando era um estagiário em 2014 no Centro de Pesquisa em Arquitetura da Informação, UnB.
 
-# PLA - Propositional Logic Analyzer
+## ALP - Propositional Logic Analyzer
 
 A propositional logic theorem prover written in JavaScript.
 
