@@ -17,35 +17,35 @@
 				{
 					if(linhas[i].indexOf(sbmComentario)!=0){
 					    var e=Parse(linhas[i]);
-					    if(!e)AdicionarConclusao("Erro:N�o foi poss&iacute;vel interpretar a linha "+(i+1)+"!");
-					    else if(e.Definir(TRUE)==FALSE)AdicionarConclusao("Erro:Contradi&ccedil;&atilde;o na linha "+(i+1)+"!");
+					    if(!e)AdicionarConclusao("Erro: Não foi possível interpretar a linha "+(i+1)+"!");
+					    else if(e.Definir(TRUE)==FALSE)AdicionarConclusao("Erro: Contradição na linha "+(i+1)+"!");
 					}
 				}
 				mostrarConclusoes();
 			}
 			function mostrarConclusoes()
 			{
-			    var str = '<center style=\'font-size:27px;\'>Conclus&otilde;es:</center>';
+			    var str = '<center style=\'font-size:27px;\'>Conclusões:</center>';
 			    var cor = ['#ffffff', '#ffffff'];
 				for(var i=0;i<Conclusoes.length;i++)
 				{
 				    str += '<div style=\'font-size:27px;color:' + cor[i % 2] + '\'>' + (i + 1) + ')   ' + Conclusoes[i] + '</div>';
 				}
-				if (Conclusoes.length == 0) str += 'N&atilde;o foi poss&iacute;vel chegar a qualquer conclus&atilde;o!';
+				if (Conclusoes.length == 0) str += 'Não foi possível chegar a qualquer conclusão!';
 				document.getElementById('conclusoes').innerHTML=str;
 			}
 		</script>
 	<head>
 	<body bgcolor="#000000" onload="source=document.getElementById('source');source.focus();//source.select();">
 	    <center>
-		<div style='font-family:monospace;font-weight:bold;font-size:47px;color:#ffffff;'>Analisador de L�gica Proposicional</div>
+		<div style='font-family:monospace;font-weight:bold;font-size:47px;color:#ffffff;'>Analisador de Lógica Proposicional</div>
         <table><tr><td>
-        <textarea id="source" rows="18" style="padding-left:10px;border:solid #ffffff 3px;background:#000000;color:#ffffff;font-weight:bold;width:600px;height:400px;font-size:27px;" cols="100">%------------Simbolos-------%
-%   Coment�rio:    %        %
-%   Implica��o:    ->       %
-%   BiImplica��o:  <->      %
-%   Conjun��o:     &        %
-%   Disjuncao:     |        %
+        <textarea id="source" rows="18" style="padding-left:10px;border:solid #ffffff 3px;background:#000000;color:#ffffff;font-weight:bold;width:600px;height:400px;font-size:27px;" cols="100">%------------Símbolos-------%
+%   Comentário:    %        %
+%   Implicação:    ->       %
+%   BiImplicação:  <->      %
+%   Conjunção:     &        %
+%   Disjunção:     |        %
 %---------------------------%
 %Exemplo abaixo:
 
@@ -53,10 +53,10 @@ Hx->Mx
 Hs</textarea></td><td>
         <div id="conclusoes" style="background:#000000;border:solid #ffffff 3px;font-weight:bold;color:#ffffff;width:600px;height:400px;background:#000000;font-family:monospace;overflow-y:scroll;">
         <center style='font-size:27px;'>Conclus&otilde;es:</center>
-        Click no bot&atilde;o ">>EXECUTAR" para gerar conclus�es!
+        Click no botão ">>EXECUTAR" para gerar conclusães!
 		</div></td></tr></table>
 		<input type="button" style='background:#000000;border:solid #ffffff 3px;font-family:monospace;font-weight:bold;font-size:47px;width:1200px;color:#ffffff;' value=">>EXECUTAR" onclick="Analizar(document.getElementById('source').value);"/>
-		<div style="color:white;position:absolute;bottom:10px;width:99%;text-align:center;">Desenvolvido por Lucas Santana no CPAI sob orienta&ccedil;&atilde;o do professor Samir</div>
+		<div style="color:white;position:absolute;bottom:10px;width:99%;text-align:center;">Desenvolvido por Lucas Santana no CPAI sob orienta&ccedil;ão do professor Samir</div>
         </center>
 	</body>
 </html>
